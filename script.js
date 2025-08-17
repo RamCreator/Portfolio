@@ -1,21 +1,21 @@
 // Sample data for your portfolio projects
 const portfolioProjects = [
     {
-        title: "Project 1:",
-        image: "https://via.placeholder.com/400x300.png?text=Website+Redesign"
+        title: "Project 1:Braight Brains",
+        image: "./img/project 1.png"
     },
     {
-        title: "Project 2: ",
-        image: "https://via.placeholder.com/400x300.png?text=Brand+Identity"
+        title: "Project 2:Kadaikutty",
+        image: "./img/project 3.png " 
     },
     {
-        title: "Project 3: ",
-        image: "https://via.placeholder.com/400x300.png?text=Mobile+App+UI"
+        title: "Project 3:uptade version ",
+        image: "./img/project 2.jpg "
     },
-    // {
-    //     title: "Project 4: Logo Collection",
-    //     image: "https://via.placeholder.com/400x300.png?text=Logo+Collection"
-    // }
+    {
+        title: "Project 4: Element Explorer",
+        image: ""
+    }
 ];
 
 // Function to dynamically create portfolio items
