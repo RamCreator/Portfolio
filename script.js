@@ -53,42 +53,42 @@ function handleFormSubmission(event) {
 }
 
 // NEW: Function to animate the skill circles
-function animateSkills() {
-    const skillCircles = document.querySelectorAll('.progress-circle');
+// function animateSkills() {
+//     const skillCircles = document.querySelectorAll('.progress-circle');
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const circle = entry.target;
-                const percentage = parseInt(circle.getAttribute('data-percentage'));
-                const angle = (percentage / 100) * 360;
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 const circle = entry.target;
+//                 const percentage = parseInt(circle.getAttribute('data-percentage'));
+//                 const angle = (percentage / 100) * 360;
                 
-                let currentAngle = 0;
-                const innerPercentage = circle.querySelector('.percentage');
+//                 let currentAngle = 0;
+//                 const innerPercentage = circle.querySelector('.percentage');
 
-                const animate = () => {
-                    if (currentAngle < angle) {
-                        currentAngle += 2; // Adjust speed
-                        if (currentAngle > angle) currentAngle = angle;
-                        const currentPercentage = Math.round((currentAngle / 360) * 100);
-                        circle.style.setProperty('--gradient-angle', `${currentAngle}deg`);
-                        innerPercentage.textContent = `${currentPercentage}%`;
-                        requestAnimationFrame(animate);
-                    }
-                };
+//                 const animate = () => {
+//                     if (currentAngle < angle) {
+//                         currentAngle += 2; // Adjust speed
+//                         if (currentAngle > angle) currentAngle = angle;
+//                         const currentPercentage = Math.round((currentAngle / 360) * 100);
+//                         circle.style.setProperty('--gradient-angle', `${currentAngle}deg`);
+//                         innerPercentage.textContent = `${currentPercentage}%`;
+//                         requestAnimationFrame(animate);
+//                     }
+//                 };
                 
-                animate();
-                observer.unobserve(circle); // Stop observing after animation
-            }
-        });
-    }, {
-        threshold: 0.5 // Trigger when 50% of the element is visible
-    });
+//                 animate();
+//                 observer.unobserve(circle); // Stop observing after animation
+//             }
+//         });
+//     }, {
+//         threshold: 0.5 // Trigger when 50% of the element is visible
+//     });
 
-    skillCircles.forEach(circle => {
-        observer.observe(circle);
-    });
-}
+//     skillCircles.forEach(circle => {
+//         observer.observe(circle);
+//     });
+// }
 
 // Run functions after the page loads
 document.addEventListener('DOMContentLoaded', () => {

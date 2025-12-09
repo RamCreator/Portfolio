@@ -106,10 +106,10 @@ nav {
     transition: width 0.3s ease;
 }
 
-.nav-links a:hover {
+/* .nav-links a:hover {
     color: var(--primary-color);
     text-shadow: 0 0 3px var(--animation-color);
-}
+} */
 .nav-links a:hover::after {
     width: 100%;
 }
@@ -291,121 +291,38 @@ h1, h2 {
     }
 }
 
-/* --- Skills Section --- */
-.skills-section {
-    margin-top: 4rem;
-    text-align: center;
-    padding: 2rem;
-}
-
-.skills-list {
+/* --- Services Grid (used for both Services and Skills) --- */
+.services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.skill {
-    background: var(--card, #f4f4f4);
-    padding: 1rem;
-    border-radius: 10px;
-    font-weight: 500;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-
-/* Skill progress bar (optional) */
-.skill-bar {
-    margin-top: 0.5rem;
-    height: 8px;
-    border-radius: 5px;
-    background: #ddd;
-    overflow: hidden;
-}
-
-.skill-bar span {
-    display: block;
-    height: 100%;
-    background: var(--primary-color, #46c4ff);
-    border-radius: 5px;
-}
-
-/* --- New Circular Progress Bar Styles --- */
-.skills-circle-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
-    justify-items: center;
-    align-items: start;
+    margin-top: 3rem;
+    text-align: left;
 }
-
-/* Fix the skill title to be centered below the circles */
-.skill-item-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.progress-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: #e9ecef; /* Background for the circle */
-    position: relative;
-    display: flex; /* This is the problem line */
-    justify-content: center;
-    align-items: center;
-    /* The h3 title is now outside the flex container, so this is no longer a problem */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+.service-item {
+    background: var(--light-bg-color);
+    padding: 2.5rem; /* More padding */
+    border-radius: 15px; /* Softer corners */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Lighter shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.progress-circle:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 10px var(--animation-color);
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12), 0 0 15px var(--animation-color);
 }
 
-/* Use the new CSS variable for the gradient angle */
-.progress-circle::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: conic-gradient(var(--primary-color) var(--gradient-angle), transparent 0%);
-    transition: background 1s ease-in-out;
-}
-
-.circle-inner {
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
-    background: var(--white-color);
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.percentage {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.skill-title {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    font-weight: 600;
+.service-item h3 {
+    font-size: 1.5rem; /* Larger heading */
     color: var(--secondary-color);
-    text-align: center;
+}
+
+
+
+/* --- Remove old circular styles --- */
+.skills-circle-grid {
+    display: none; /* This hides the old section */
 }
 
 /* --- Services Grid --- */
