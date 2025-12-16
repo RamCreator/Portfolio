@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { MeshDistortMaterial, Sphere, Float } from '@react-three/drei';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import portraitImage from '/public/img/5.jpg';
 
 // --- 3D Blob Component ---
 const MorphingBlob = () => {
@@ -126,7 +127,7 @@ const About = () => {
                     >
                         <div className="absolute inset-0 bg-blue-500/20 mix-blend-overlay z-10"></div>
                         <img 
-                            src="/img/5.jpg" 
+                            src={portraitImage} 
                             alt="RamCreator Portrait" 
                             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-100 group-hover:scale-110"
                         />

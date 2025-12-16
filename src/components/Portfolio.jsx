@@ -1,12 +1,19 @@
 import { useRef } from 'react';
 import { motion, useScroll, useSpring, useTransform, useVelocity, useMotionValue, useAnimationFrame } from 'framer-motion';
 
+// Import project images
+import dsportszoneShop from '/public/img/Dsprtszone-1.png';
+import brightBrains from '/public/img/project1.png';
+import kadaikuttyPoster from '/public/img/project 3.png';
+import dsportszoneBrand from '/public/img/Dsportszone-2.png';
+import brightBrains2 from '/public/img/project 2.jpg';
+
 const projects = [
-    { title: "Dsportszone Shop", category: "Social Media", img: "/img/Dsprtszone-1.png" },
-    { title: "Bright Brains", category: "Brand Identity", img: "/img/project1.png" },
-    { title: "Kadaikutty Poster", category: "Poster Design", img: "/img/project 3.png" },
-    { title: "Dsportszone Brand", category: "Brand Design", img: "/img/Dsportszone-2.png" },
-    { title: "Bright Brains II", category: "Brand Identity", img: "/img/project 2.jpg" },
+    { title: "Dsportszone Shop", category: "Social Media", img: dsportszoneShop },
+    { title: "Bright Brains", category: "Brand Identity", img: brightBrains },
+    { title: "Kadaikutty Poster", category: "Poster Design", img: kadaikuttyPoster },
+    { title: "Dsportszone Brand", category: "Brand Design", img: dsportszoneBrand },
+    { title: "Bright Brains II", category: "Brand Identity", img: brightBrains2 },
 ];
 
 const ProjectCard = ({ project, scrollX }) => {
