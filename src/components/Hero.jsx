@@ -219,7 +219,7 @@ const Hero = () => {
                     transition={{ delay: 0.4, duration: 0.8, type: "spring" }}
                     className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 tracking-tight leading-none mix-blend-overlay"
                 >
-                    Ramu
+                    Ram
                     <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
                         GRAVITY
