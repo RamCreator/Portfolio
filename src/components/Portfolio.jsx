@@ -2,11 +2,11 @@ import { useRef } from 'react';
 import { motion, useScroll, useSpring, useTransform, useVelocity, useMotionValue, useAnimationFrame } from 'framer-motion';
 
 // Import project images
-import dsportszoneShop from '/public/img/Dsprtszone-1.png';
-import brightBrains from '/public/img/project1.png';
-import kadaikuttyPoster from '/public/img/project 3.png';
-import dsportszoneBrand from '/public/img/Dsportszone-2.png';
-import brightBrains2 from '/public/img/project 2.jpg';
+import dsportszoneShop from '../assets/img/Dsprtszone-1.png';
+import brightBrains from '../assets/img/project1.png';
+import kadaikuttyPoster from '../assets/img/project 3.png';
+import dsportszoneBrand from '../assets/img/Dsportszone-2.png';
+import brightBrains2 from '../assets/img/project 2.jpg';
 
 const projects = [
     { title: "Dsportszone Shop", category: "Social Media", img: dsportszoneShop },

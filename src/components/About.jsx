@@ -2,7 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { MeshDistortMaterial, Sphere, Float } from '@react-three/drei';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import portraitImage from '/public/img/5.jpg';
+import portraitImage from '../assets/img/5.jpg';
 
 // --- 3D Blob Component ---
 const MorphingBlob = () => {
